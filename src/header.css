@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  background-color: rgba(42, 123, 155, 1);
+}
+header .page-title {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
+header .page-title img {
+  width: 5rem;
+}
+header .page-title h1 {
+  margin: 0;
+  padding: 0.5rem;
+}
+header .page-title:hover {
+  background-color: lightgray;
+}
+header .action-buttons {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+header .search-box input,
+header .action-buttons button {
+  padding: 0.8em;
+  border: 1px solid black;
+}
+header .action-buttons button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+header .search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .search-box input {
+  border-right: none;
+}
