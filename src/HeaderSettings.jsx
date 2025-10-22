@@ -1,4 +1,4 @@
-import { BgModeFill, BgModeGrad } from "./constants.jsx";
+import { bgModeFill, bgModeGrad } from "./constants.jsx";
 import { createDefaultHeaderSettings } from "./utilities.jsx";
 
 export const HeaderSettings = ({ headerSettings, setHeaderSettings }) => {
@@ -35,8 +35,8 @@ export const HeaderSettings = ({ headerSettings, setHeaderSettings }) => {
           <input
             type="radio"
             name="bgmode"
-            value={BgModeFill}
-            checked={s.bgMode === BgModeFill}
+            value={bgModeFill}
+            checked={s.bgMode === bgModeFill}
             onChange={(e) => update({ bgMode: e.target.value })}
           />
           Einzelfarbe
@@ -45,8 +45,8 @@ export const HeaderSettings = ({ headerSettings, setHeaderSettings }) => {
           <input
             type="radio"
             name="bgmode"
-            value={BgModeGrad}
-            checked={s.bgMode === BgModeGrad}
+            value={bgModeGrad}
+            checked={s.bgMode === bgModeGrad}
             onChange={(e) => update({ bgMode: e.target.value })}
           />
           Gradient
@@ -54,14 +54,14 @@ export const HeaderSettings = ({ headerSettings, setHeaderSettings }) => {
       </p>
       <p>
         Farben:&nbsp;
-        {s.bgMode === BgModeFill && (
+        {s.bgMode === bgModeFill && (
           <input
             type="color"
             value={s.fillColor}
             onChange={(e) => update({ fillColor: e.target.value })}
           />
         )}
-        {s.bgMode === BgModeGrad && (
+        {s.bgMode === bgModeGrad && (
           <span>
             <input
               type="color"
@@ -83,7 +83,7 @@ export const HeaderSettings = ({ headerSettings, setHeaderSettings }) => {
           </span>
         )}
       </p>
-      {s.bgMode === BgModeGrad && (
+      {s.bgMode === bgModeGrad && (
         <p>
           Gradientwinkel:
           <input

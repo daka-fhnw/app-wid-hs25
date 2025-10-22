@@ -1,7 +1,7 @@
 import {
-  PageHome,
-  PageSearchResult,
-  PageHeaderSettings,
+  pageHome,
+  pageSearchResult,
+  pageHeaderSettings,
 } from "./constants.jsx";
 import { Home } from "./Home.jsx";
 import { SearchResult } from "./SearchResult.jsx";
@@ -15,9 +15,9 @@ export const MainArea = ({
 }) => {
   return (
     <main>
-      {page === PageHome && <Home />}
-      {page === PageSearchResult && <SearchResult search={search} />}
-      {page === PageHeaderSettings && (
+      {page === pageHome && <Home />}
+      {page === pageSearchResult && <SearchResult search={search} />}
+      {page === pageHeaderSettings && (
         <HeaderSettings
           headerSettings={headerSettings}
           setHeaderSettings={setHeaderSettings}

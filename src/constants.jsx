@@ -1,6 +1,6 @@
-export const PageHome = "home";
-export const PageSearchResult = "search-result";
-export const PageHeaderSettings = "header-settings";
+export const pageHome = "home";
+export const pageSearchResult = "search-result";
+export const pageHeaderSettings = "header-settings";
 
-export const BgModeFill = "fill";
-export const BgModeGrad = "grad";
+export const bgModeFill = "fill";
+export const bgModeGrad = "grad";

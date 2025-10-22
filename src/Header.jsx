@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PageHome, PageHeaderSettings, BgModeGrad } from "./constants.jsx";
+import { pageHome, pageHeaderSettings, bgModeGrad } from "./constants.jsx";
 import "./header.css";
 import catLogo from "./assets/cat.svg";
 
@@ -10,18 +10,18 @@ export const Header = ({ setPage, headerSettings, searchFn }) => {
     <header
       style={{
         background:
-          s.bgMode === BgModeGrad
+          s.bgMode === bgModeGrad
             ? `linear-gradient(${s.gradDegrees}deg, ${s.gradColor1} 0%, ${s.gradColor2} 50%, ${s.gradColor3} 100%)`
             : s.fillColor,
         boxShadow: s.showShadow ? "rgba(0, 0, 0, 0.3) 0px 10px 10px" : null,
       }}
     >
-      <div className="page-title" onClick={() => setPage(PageHome)}>
+      <div className="page-title" onClick={() => setPage(pageHome)}>
         <img src={catLogo} />
         <h1> CatNapApp </h1>
       </div>
       <div className="action-buttons">
-        <button onClick={() => setPage(PageHeaderSettings)}>
+        <button onClick={() => setPage(pageHeaderSettings)}>
           Einstellungen
         </button>
         {s.showSearch && (
