@@ -1,11 +1,13 @@
-import { useState } from "react";
 import { pageHome, pageHeaderSettings, bgModeGrad } from "./constants.jsx";
 import "./header.css";
 import catLogo from "./assets/cat.svg";
 
 export const Header = ({ setPage, headerSettings, searchFn }) => {
   const s = headerSettings;
-  const [searchInput, setSearchInput] = useState("");
+  const handleSubmit = (e) => {
+    searchFn(e.target.search.value);
+    e.preventDefault();
+  };
   return (
     <header
       style={{
@@ -26,20 +28,10 @@ export const Header = ({ setPage, headerSettings, searchFn }) => {
         </button>
         {s.showSearch && (
           <div className="search-box">
-            <input
-              type="search"
-              placeholder="Suchbegriff"
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-            />
-            <button
-              onClick={() => {
-                searchFn(searchInput);
-                setSearchInput("");
-              }}
-            >
-              Suchen
-            </button>
+            <form onSubmit={handleSubmit}>
+              <input type="search" name="search" placeholder="Suchbegriff" />
+              <button type="submit">Suchen</button>
+            </form>
           </div>
         )}
       </div>
