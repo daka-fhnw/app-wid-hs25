@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "./Header.jsx";
 import { MainArea } from "./MainArea.jsx";
 import { pageHome, pageSearchResult } from "./constants.jsx";
@@ -15,6 +15,13 @@ function App() {
     setSearch(value);
     setPage(pageSearchResult);
   };
+
+  useEffect(() => {
+    // z.B. fetch und dann in useState ablegen
+
+    return;
+  });
+
   return (
     <>
       <Header
